@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Sayyed Rihan Akhil</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+/* =========================
+   BUTTON
+========================= */
+
+.about-button{
+
+    display:inline-block;
+
+    width:max-content;
+
+    padding:13px 25px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    background:
+    linear-gradient(
+        90deg,
+        #00a8ff,
+        #7c3cff
+    );
+
+    box-shadow:
+    0 8px 25px
+    rgba(0,140,255,.15);
+
+    transition:.3s;
+}
+
+
+.about-button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 12px 35px
+    rgba(0,229,255,.25);
+}
+
+
+body{
+    min-height:100vh;
+    background:#070b18;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    width:400px;
+    height:400px;
+    background:#00eaff;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.15;
+    top:-150px;
+    left:-100px;
+    z-index:-1;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:400px;
+    height:400px;
+    background:#8b5cf6;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.15;
+    bottom:-150px;
+    right:-100px;
+    z-index:-1;
+}
+
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
+    padding:80px 0;
+}
+
+.heading{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.heading span{
+    color:#00eaff;
+    letter-spacing:3px;
+    font-size:14px;
+}
+
+.heading h1{
+    font-size:48px;
+    margin:12px 0;
+}
+
+.heading h1 b{
+    background:linear-gradient(90deg,#00eaff,#9b5cff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.heading p{
+    color:#aeb8ca;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.service{
+    position:relative;
+    padding:35px 28px;
+    border-radius:25px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.12);
+    backdrop-filter:blur(15px);
+    overflow:hidden;
+    transition:.4s;
+}
+
+.service::before{
+    content:"";
+    position:absolute;
+    width:100px;
+    height:100px;
+    background:#00eaff;
+    border-radius:50%;
+    filter:blur(70px);
+    opacity:0;
+    right:-30px;
+    top:-30px;
+    transition:.4s;
+}
+
+.service:hover{
+    transform:translateY(-12px);
+    border-color:#00eaff;
+    box-shadow:0 15px 40px rgba(0,234,255,.12);
+}
+
+.service:hover::before{
+    opacity:.5;
+}
+
+.icon{
+    width:65px;
+    height:65px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:18px;
+    font-size:30px;
+    background:linear-gradient(135deg,#00eaff,#7c3aed);
+    margin-bottom:22px;
+}
+
+.service h2{
+    font-size:22px;
+    margin-bottom:13px;
+}
+
+.service p{
+    color:#aeb8ca;
+    line-height:1.7;
+    margin-bottom:22px;
+}
+
+.more{
+    color:#00eaff;
+    font-size:14px;
+}
+
+@media(max-width:850px){
+    .services{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:550px){
+    .heading h1{
+        font-size:35px;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="heading">
+        <span>WHAT I DO</span>
+        <h1>My <b>Services</b></h1>
+        <p>Professional and practical web development services</p>
+    </div>
+
+    <div class="services">
+
+        <div class="service">
+            <div class="icon">🌐</div>
+            <h2>Web Development</h2>
+            <p>
+                Modern, responsive and attractive websites using
+                HTML, CSS and PHP.
+            </p>
+            <div class="more">Explore Service →</div>
+        </div>
+
+        <div class="service">
+            <div class="icon">🎨</div>
+            <h2>Web Design</h2>
+            <p>
+                Premium layouts, glassmorphism interfaces and
+                responsive designs for different screen sizes.
+            </p>
+            <div class="more">Explore Service →</div>
+        </div>
+
+        <div class="service">
+            <div class="icon">⚙️</div>
+            <h2>PHP Development</h2>
+            <p>
+                Dynamic PHP-based projects including forms,
+                login systems and data management.
+            </p>
+            <div class="more">Explore Service →</div>
+        </div>
+
+        <div class="service">
+            <div class="icon">📝</div>
+            <h2>Admission Forms</h2>
+            <p>
+                Attractive online admission forms with clean
+                user-friendly interfaces.
+            </p>
+            <div class="more">Explore Service →</div>
+        </div>
+
+        <div class="service">
+            <div class="icon">🎓</div>
+            <h2>Student Projects</h2>
+            <p>
+                Academic web projects designed for practical
+                learning and demonstrations.
+            </p>
+            <div class="more">Explore Service →</div>
+        </div>
+
+        <div class="service">
+            <div class="icon">🚀</div>
+            <h2>Project Development</h2>
+            <p>
+                Complete project development with attractive UI
+                and organized structure.
+            </p>
+            <div class="more">Explore Service →</div>
+        </div>
+         <!-- BUTTON -->
+
+            <a
+                href="index1.html"
+                class="about-button"
+            >
+                Let's Connect →
+            </a>
+    </div>
+
+</div>
+
+</body>
+</html>

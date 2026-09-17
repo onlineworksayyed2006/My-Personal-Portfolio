@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education | Sayyed Rihan Akhil</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+/* =========================
+   BUTTON
+========================= */
+
+.about-button{
+
+    display:inline-block;
+
+    width:max-content;
+
+    padding:13px 25px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    background:
+    linear-gradient(
+        90deg,
+        #00a8ff,
+        #7c3cff
+    );
+
+    box-shadow:
+    0 8px 25px
+    rgba(0,140,255,.15);
+
+    transition:.3s;
+}
+
+
+.about-button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 12px 35px
+    rgba(0,229,255,.25);
+}
+
+body{
+    min-height:100vh;
+    background:#070b18;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+body::before,
+body::after{
+    content:"";
+    position:fixed;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    filter:blur(100px);
+    opacity:.18;
+    z-index:-1;
+}
+
+body::before{
+    background:#00eaff;
+    top:-120px;
+    left:-100px;
+}
+
+body::after{
+    background:#8b5cf6;
+    right:-120px;
+    bottom:-100px;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:80px 0;
+}
+
+.heading{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.heading span{
+    color:#00eaff;
+    font-size:14px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.heading h1{
+    font-size:48px;
+    margin-top:12px;
+}
+
+.heading h1 b{
+    background:linear-gradient(90deg,#00eaff,#9b5cff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.heading p{
+    color:#aeb8ca;
+    margin-top:15px;
+}
+
+.timeline{
+    position:relative;
+    max-width:850px;
+    margin:auto;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+    width:3px;
+    background:linear-gradient(#00eaff,#9b5cff);
+    transform:translateX(-50%);
+}
+
+.card{
+    width:45%;
+    padding:25px;
+    margin:35px 0;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:22px;
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(15px);
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#00eaff;
+    box-shadow:0 0 30px rgba(0,234,255,.18);
+}
+
+.card:nth-child(odd){
+    margin-right:auto;
+}
+
+.card:nth-child(even){
+    margin-left:auto;
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    background:linear-gradient(135deg,#00eaff,#7c3aed);
+    margin-bottom:18px;
+}
+
+.card h2{
+    font-size:23px;
+    margin-bottom:8px;
+}
+
+.card h3{
+    color:#00eaff;
+    font-size:15px;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#aeb8ca;
+    line-height:1.7;
+}
+
+.year{
+    display:inline-block;
+    margin-top:15px;
+    padding:7px 15px;
+    border-radius:20px;
+    background:rgba(0,234,255,.1);
+    color:#00eaff;
+    font-size:13px;
+}
+
+@media(max-width:700px){
+
+    .heading h1{
+        font-size:35px;
+    }
+
+    .timeline::before{
+        left:15px;
+    }
+
+    .card,
+    .card:nth-child(even),
+    .card:nth-child(odd){
+        width:calc(100% - 45px);
+        margin-left:45px;
+    }
+    
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="heading">
+        <span>My Journey</span>
+        <h1>My <b>Education</b></h1>
+        <p>Academic journey and learning experience</p>
+    </div>
+
+    <div class="timeline">
+
+        <div class="card">
+            <div class="icon">🎓</div>
+            <h2>B.Sc Software Engineering</h2>
+            <h3>COCSIT</h3>
+            <p>
+                Currently pursuing Bachelor of Science in Software Engineering,
+                focusing on programming, web development and software technologies.
+            </p>
+            <span class="year">Current</span>
+        </div>
+
+        <div class="card">
+            <div class="icon">💻</div>
+            <h2>Web Development</h2>
+            <h3>Practical Learning</h3>
+            <p>
+                Learning and developing projects using HTML, CSS and PHP with
+                practical project-based experience.
+            </p>
+            <span class="year">Learning</span>
+        </div>
+
+        <div class="card">
+            <div class="icon">📚</div>
+            <h2>Academic Foundation</h2>
+            <h3>School Education</h3>
+            <p>
+                Built a strong academic foundation and developed an interest
+                in computers and technology.
+            </p>
+            <span class="year">Completed</span>
+        </div>
+         <!-- BUTTON -->
+
+            <a
+                href="index1.html"
+                class="about-button"
+            >
+                Let's Connect →
+            </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Me | Sayyed Rihan Akhil</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#050816;
+    color:white;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section{
+    min-height:100vh;
+    padding:100px 7%;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+
+
+/* BACKGROUND GLOW */
+
+.about-section::before{
+    content:"";
+    position:absolute;
+
+    width:350px;
+    height:350px;
+
+    background:#00e5ff;
+
+    filter:blur(180px);
+
+    opacity:.12;
+
+    top:-120px;
+    left:-100px;
+
+    pointer-events:none;
+}
+
+.about-section::after{
+    content:"";
+    position:absolute;
+
+    width:350px;
+    height:350px;
+
+    background:#7c3cff;
+
+    filter:blur(180px);
+
+    opacity:.12;
+
+    bottom:-150px;
+    right:-100px;
+
+    pointer-events:none;
+}
+
+
+.about-container{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    position:relative;
+    z-index:2;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.about-heading{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.about-heading .small-title{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    border:1px solid
+    rgba(0,229,255,.35);
+
+    background:
+    rgba(0,229,255,.06);
+
+    color:#00e5ff;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+
+    margin-bottom:18px;
+}
+
+
+.about-heading h1{
+
+    font-size:48px;
+
+    margin-bottom:12px;
+}
+
+.about-heading h1 span{
+
+    background:
+    linear-gradient(
+        90deg,
+        #00e5ff,
+        #7c3cff,
+        #ff4ecd
+    );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+}
+
+
+.about-heading p{
+
+    color:#8995ad;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.about-main{
+
+    display:grid;
+
+    grid-template-columns:
+    350px 1fr;
+
+    gap:55px;
+
+    align-items:center;
+}
+
+
+/* =========================
+   PROFILE CARD
+========================= */
+
+.profile-card{
+
+    position:relative;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    background:
+    rgba(255,255,255,.045);
+
+    border:1px solid
+    rgba(255,255,255,.10);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+    0 25px 70px
+    rgba(0,0,0,.4);
+
+    transition:.4s;
+}
+
+
+.profile-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:
+    rgba(0,229,255,.5);
+
+    box-shadow:
+    0 25px 70px
+    rgba(0,229,255,.15);
+}
+
+
+/* PROFILE IMAGE */
+
+.profile-image{
+
+    width:190px;
+    height:190px;
+
+    padding:5px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #00e5ff,
+        #7c3cff,
+        #ff4ecd
+    );
+
+    box-shadow:
+    0 0 40px
+    rgba(0,229,255,.2);
+}
+
+
+.profile-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    display:block;
+
+    transform:none !important;
+
+    filter:none !important;
+}
+
+
+.profile-card h2{
+
+    font-size:23px;
+
+    margin-bottom:8px;
+}
+
+
+.profile-card .role{
+
+    color:#00e5ff;
+
+    font-size:13px;
+
+    font-weight:bold;
+}
+
+
+/* LINE */
+
+.profile-line{
+
+    width:60px;
+    height:2px;
+
+    margin:20px auto;
+
+    background:
+    linear-gradient(
+        90deg,
+        #00e5ff,
+        #7c3cff
+    );
+
+    border-radius:20px;
+}
+
+
+/* STATUS */
+
+.status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:9px 17px;
+
+    border-radius:30px;
+
+    background:
+    rgba(0,229,255,.06);
+
+    border:1px solid
+    rgba(0,229,255,.2);
+
+    color:#cbd5e1;
+
+    font-size:12px;
+}
+
+
+.status-dot{
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:#00ff9d;
+
+    box-shadow:
+    0 0 10px #00ff9d;
+
+    animation:pulse 1.5s infinite;
+}
+
+
+@keyframes pulse{
+
+    0%,100%{
+        opacity:1;
+        transform:scale(1);
+    }
+
+    50%{
+        opacity:.4;
+        transform:scale(.7);
+    }
+
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.about-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+
+/* INTRO CARD */
+
+.intro-card{
+
+    display:flex;
+
+    gap:20px;
+
+    padding:27px;
+
+    border-radius:22px;
+
+    background:
+    rgba(255,255,255,.04);
+
+    border:1px solid
+    rgba(255,255,255,.08);
+
+    transition:.3s;
+}
+
+
+.intro-card:hover{
+
+    border-color:
+    rgba(0,229,255,.3);
+
+    transform:translateY(-3px);
+}
+
+
+.intro-icon{
+
+    min-width:55px;
+    height:55px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:16px;
+
+    font-size:27px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(0,229,255,.15),
+        rgba(124,60,255,.15)
+    );
+}
+
+
+.intro-card h2{
+
+    font-size:22px;
+
+    margin-bottom:8px;
+}
+
+
+.intro-card h2 span{
+
+    color:#00e5ff;
+}
+
+
+.intro-card p{
+
+    color:#9ba7ba;
+
+    font-size:14px;
+
+    line-height:1.8;
+}
+
+
+/* =========================
+   THREE CARDS
+========================= */
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:15px;
+}
+
+
+.feature-card{
+
+    padding:23px;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,.035);
+
+    border:1px solid
+    rgba(255,255,255,.08);
+
+    transition:.4s;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+
+.feature-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:0;
+    height:2px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #00e5ff,
+        #7c3cff
+    );
+
+    transition:.4s;
+}
+
+
+.feature-card:hover::before{
+    width:100%;
+}
+
+
+.feature-card:hover{
+
+    transform:translateY(-7px);
+
+    border-color:
+    rgba(0,229,255,.3);
+
+    background:
+    rgba(255,255,255,.06);
+}
+
+
+.feature-icon{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+}
+
+
+.feature-card h3{
+
+    font-size:16px;
+
+    margin-bottom:8px;
+}
+
+
+.feature-card p{
+
+    color:#8995aa;
+
+    font-size:12px;
+
+    line-height:1.7;
+}
+
+
+/* =========================
+   INFORMATION
+========================= */
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:12px;
+}
+
+
+.info-box{
+
+    padding:18px;
+
+    border-radius:16px;
+
+    background:
+    rgba(255,255,255,.025);
+
+    border:1px solid
+    rgba(255,255,255,.07);
+
+    transition:.3s;
+}
+
+
+.info-box:hover{
+
+    border-color:
+    rgba(124,60,255,.4);
+
+    transform:translateY(-3px);
+}
+
+
+.info-box small{
+
+    display:block;
+
+    color:#68758d;
+
+    font-size:10px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    margin-bottom:7px;
+}
+
+
+.info-box strong{
+
+    font-size:12px;
+
+    color:#dce5ee;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.about-button{
+
+    display:inline-block;
+
+    width:max-content;
+
+    padding:13px 25px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    background:
+    linear-gradient(
+        90deg,
+        #00a8ff,
+        #7c3cff
+    );
+
+    box-shadow:
+    0 8px 25px
+    rgba(0,140,255,.15);
+
+    transition:.3s;
+}
+
+
+.about-button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 12px 35px
+    rgba(0,229,255,.25);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:950px){
+
+    .about-main{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .profile-card{
+
+        max-width:400px;
+
+        width:100%;
+
+        margin:auto;
+
+    }
+
+}
+
+
+@media(max-width:650px){
+
+    .about-section{
+
+        padding:80px 5%;
+    }
+
+    .about-heading h1{
+
+        font-size:36px;
+    }
+
+    .feature-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .info-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .intro-card{
+
+        flex-direction:column;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about-section" id="about">
+
+<div class="about-container">
+
+
+    <!-- HEADING -->
+
+    <div class="about-heading">
+
+        <div class="small-title">
+            ABOUT ME
+        </div>
+
+        <h1>
+            Know <span>About Me</span>
+        </h1>
+
+        <p>
+            A little information about who I am
+        </p>
+
+    </div>
+
+
+    <!-- MAIN -->
+
+    <div class="about-main">
+
+
+        <!-- PROFILE -->
+
+        <div class="profile-card">
+
+            <div class="profile-image">
+
+                <img
+                    src="C:\Users\admin\Downloads\yes.png"
+                    alt="Sayyed Rihan Akhil"
+                >
+
+            </div>
+
+            <h2>
+                Sayyed Rihan Akhil
+            </h2>
+
+            <div class="role">
+                B.Sc. Software Engineering Student
+            </div>
+
+            <div class="profile-line"></div>
+
+            <div class="status">
+
+                <span class="status-dot"></span>
+
+                Available for Learning & Projects
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT CONTENT -->
+
+        <div class="about-content">
+
+
+            <!-- INTRO -->
+
+            <div class="intro-card">
+
+                <div class="intro-icon">
+                    👋
+                </div>
+
+                <div>
+
+                    <h2>
+                        Hello, I'm
+                        <span>Rihan</span>
+                    </h2>
+
+                    <p>
+                        I am a B.Sc. Software Engineering student
+                        interested in web development. I enjoy
+                        creating modern, attractive and responsive
+                        websites and improving my practical
+                        development skills through real projects.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FEATURES -->
+
+            <div class="feature-grid">
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        Web Development
+                    </h3>
+
+                    <p>
+                        Creating structured and responsive
+                        websites using HTML, CSS and PHP.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🎨
+                    </div>
+
+                    <h3>
+                        Modern Design
+                    </h3>
+
+                    <p>
+                        Designing clean interfaces with
+                        attractive layouts and visual effects.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🚀
+                    </div>
+
+                    <h3>
+                        My Goal
+                    </h3>
+
+                    <p>
+                        Build practical projects and
+                        continuously improve my skills.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- INFO -->
+
+            <div class="info-grid">
+
+                <div class="info-box">
+
+                    <small>
+                        Education
+                    </small>
+
+                    <strong>
+                        B.Sc. Software Engineering
+                    </strong>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <small>
+                        Skills
+                    </small>
+
+                    <strong>
+                        HTML • CSS • PHP
+                    </strong>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <small>
+                        Focus
+                    </small>
+
+                    <strong>
+                        Web Development
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <a
+                href="index1.html"
+                class="about-button"
+            >
+                Let's Connect →
+            </a>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<script>
+
+/* SIMPLE IMAGE LOAD EFFECT */
+
+const image =
+document.querySelector(".profile-image img");
+
+image.addEventListener("load",function(){
+
+    this.style.opacity="1";
+
+});
+
+</script>
+
+
+</body>
+</html>
